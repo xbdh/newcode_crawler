@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+        .content{
+            line-height: 25px;
+        }
+    </style>
+
+    <!-- Bootstrap CSS -->
+{{/*    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">*/}}
+
+    <title>Cpp</title>
+</head>
+<body  style=" white-space: pre-line">
+<div class="container" style="width: 690px;margin-left: auto;margin-right:auto">
+    {{range $index,$elem := . }}
+        <div class="interview">
+
+            <h2>{{$index }} . {{ $elem.Title      }} </h2>
+            <p><a  href="{{ $elem.Link       }}" > 链接</a> || {{ $elem.Author     }} || {{ $elem.Time       }} || {{ $elem.DiscussTag  }}</p>
+            <div class="content">{{ $elem.Content    }} </div>
+
+
+        </div>
+    {{ end }}
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+{{/*<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>*/}}
+{{/*<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>*/}}
+{{/*<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>*/}}
+
+
+<script>
+    // $(function(){
+    //     $(".content").each(function(){
+    //
+    //         var innerhtmlstring=$(this).text()
+    //         // var innerhtml =$.parseHTML(innerhtmlstring,true)
+    //
+    //         $(this).html(innerhtmlstring)
+    //         $("a").each(function () {
+    //             $(this).attr('href', '#');     //修改<a>的 href属性值为 #  这样状态栏不会显示链接地址
+    //
+    //             $(this).click(function (event) {
+    //                 event.preventDefault();   // 如果<a>定义了 target="_blank“ 需要这句来阻止打开新页面
+    //
+    //             });
+    //
+    //         });
+    //     });
+    //
+    //
+    //
+    // });
+</script>
+</body>
+</html>
